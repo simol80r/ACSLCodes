@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Lettercryption
+{
+	public static void main (String [] args)
+  {
+    System.out.println ("Please enter a letter.");
+    Scanner userin = new Scanner (System.in);
+    String ashkey = userin.nextLine();
+    char lotte = ashkey.charAt(0);
+    int eger = (int) lotte;
+    int code = 0;
+    if (eger >=65 && eger <=69)
+      	code = (eger - 64)*2;
+    else if (eger >= 70 && eger <= 74)
+      	code = (eger-64)%3*5;
+    else if (eger >= 75 && eger <= 79)
+      	code = ((eger-64)/4)*8;
+    else if (eger >= 80 && eger <= 85)
+      	code = (((eger-64)/10)+ ((eger-64)%10))*10;
+    else if (eger >= 86 && eger <= 91){
+    		//yet to be done
+    }
+    System.out.println ("The letter " + lotte + " encodes to the integer " + code);
+    userin.close();
+  }
+}
