@@ -1,3 +1,5 @@
+/* Coding problem can be found at: http://www.acsl.org/acsl/sample_ques/c_1_code_jr.pdf
+*  This is also just a test; the letter-to-integer stage has been completed; the rest will be soon*/
 import java.util.Scanner;
 public class Lettercryption
 {
@@ -18,7 +20,12 @@ public class Lettercryption
     else if (eger >= 80 && eger <= 85)
       	code = (((eger-64)/10)+ ((eger-64)%10))*10;
     else if (eger >= 86 && eger <= 91){
-    		//yet to be done
+    	int div = eger-1;
+    	while (eger%div != 0)
+    	{
+    		div--;
+    	}
+    	return div;
     }
     System.out.println ("The letter " + lotte + " encodes to the integer " + code);
     userin.close();
